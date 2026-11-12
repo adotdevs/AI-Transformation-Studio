@@ -1,0 +1,180 @@
+:root {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1c2430;
+  background: #eef1f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app {
+  display: flex;
+  height: 100%;
+  min-height: 0;
+}
+
+.sidebar {
+  width: 240px;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 28px 18px;
+  color: #f4f7fb;
+  background: #1c2430;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 10px;
+}
+
+.brand strong {
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.brand span {
+  color: #b7c2d0;
+  font-size: 0.85rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-item {
+  text-align: left;
+  color: #d5deea;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: #ffffff;
+  background: #2c3848;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 32px;
+  overflow: auto;
+}
+
+.panel {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panel-header h2 {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+}
+
+.panel-header p {
+  margin: 0;
+  color: #526070;
+}
+
+.stage,
+.meter {
+  height: 220px;
+  display: grid;
+  place-items: center;
+  border: 1px dashed #c5ced8;
+  border-radius: 12px;
+  color: #6b7888;
+  background: #ffffff;
+}
+
+.meter {
+  height: 72px;
+  place-items: stretch;
+  padding: 16px;
+}
+
+.meter span {
+  display: block;
+  width: 18%;
+  border-radius: 999px;
+  background: #d5deea;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #526070;
+  font-size: 0.85rem;
+}
+
+.controls input,
+.controls select,
+.controls button {
+  min-height: 40px;
+  border-radius: 8px;
+  border: 1px solid #c5ced8;
+  background: #ffffff;
+  color: #1c2430;
+  padding: 0 12px;
+}
+
+.controls input {
+  width: 280px;
+}
+
+.controls button {
+  cursor: pointer;
+  background: #1c2430;
+  color: #ffffff;
+  border-color: #1c2430;
+}
+
+.controls button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.status {
+  align-self: center;
+  color: #526070;
+}
